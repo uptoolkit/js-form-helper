@@ -5,5 +5,3 @@ export {
     Errors,
     Form,
 };
-
-export default Form;
