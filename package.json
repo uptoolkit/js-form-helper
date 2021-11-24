@@ -1,6 +1,6 @@
 {
   "name": "js-form-helper",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Js form helper based on Laravel validation format for back-end and front-end errors",
   "homepage": "https://github.com/uptoolkit/js-form-helper",
   "author": "Daniel Sum",
