@@ -4,15 +4,12 @@ import {guardAgainstReservedFieldName, isArray, isFile, merge, objectToFormData}
 import Validator from 'validatorjs';
 
 class Form {
-    // @ts-ignore
-    private processing: boolean;
-    // @ts-ignore
-    private successful: boolean;
-    private errors: any;
-    // @ts-ignore
     private __options: object | null;
-    // @ts-ignore
-    private initial: object | null;
+
+    public processing: boolean;
+    public successful: boolean;
+    public errors: any;
+    public initial: object | null;
 
     /**
      * Create a new Form instance.

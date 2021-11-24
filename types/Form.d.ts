@@ -1,9 +1,9 @@
 declare class Form {
-    private processing;
-    private successful;
-    private errors;
     private __options;
-    private initial;
+    processing: boolean;
+    successful: boolean;
+    errors: any;
+    initial: object | null;
     /**
      * Create a new Form instance.
      *

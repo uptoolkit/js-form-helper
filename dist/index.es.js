@@ -151,10 +151,10 @@ function guardAgainstReservedFieldName(fieldName) {
 }
 class Form {
   constructor(data = {}, options = {}) {
+    __publicField(this, "__options");
     __publicField(this, "processing");
     __publicField(this, "successful");
     __publicField(this, "errors");
-    __publicField(this, "__options");
     __publicField(this, "initial");
     this.processing = false;
     this.successful = false;
