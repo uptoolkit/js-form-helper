@@ -1,11 +1,12 @@
 // @ts-nocheck
-import {axios} from '@bundled-es-modules/axios';
 import Errors from './Errors';
 import {guardAgainstReservedFieldName, isArray, isFile, merge, objectToFormData} from './util';
-import * as Validator from 'validatorjs';
+import Validator from 'validatorjs';
 
 class Form {
+    // @ts-ignore
     private processing: boolean;
+    // @ts-ignore
     private successful: boolean;
     private errors: any;
     // @ts-ignore
@@ -157,6 +158,15 @@ class Form {
         }
 
         this.errors.clear();
+    }
+
+    /**
+     * Send a POST request to the given URL.
+     *
+     * @param {string} url
+     */
+    get(url: string) {
+        return this.submit('get', url);
     }
 
     /**
@@ -342,13 +352,13 @@ class Form {
      * @param rules
      * @param customErrorMessages
      */
-    validate(rules:object, customErrorMessages?: object) {
+    validate(rules:any, customErrorMessages?: object) {
 
         this.errors.clear();
         this.processing = true;
         this.successful = false;
 
-        let validation = new Validator(this.data(), rules);
+        let validation = new Validator(this.data(), rules, customErrorMessages);
 
         if (validation.fails()) {
             this.successful = false;

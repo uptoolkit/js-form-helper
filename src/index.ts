@@ -3,7 +3,7 @@ import Errors from "./Errors";
 
 export {
     Errors,
-    Form
+    Form,
 };
 
 export default Form;

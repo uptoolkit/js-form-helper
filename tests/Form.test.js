@@ -21,6 +21,11 @@ describe('Form', () => {
     form = Form.create({});
   });
 
+  it('validate regarding rules', () => {
+    expect(form.field1).toBe('value 1');
+    expect(form.field2).toBe('value 2');
+  });
+
   it('exposes the passed form field values as properties', () => {
     expect(form.field1).toBe('value 1');
     expect(form.field2).toBe('value 2');
